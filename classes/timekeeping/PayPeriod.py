@@ -6,7 +6,7 @@ class PayPeriod:
         if not isinstance(endDate, DateTime):
             raise Exception("PayPeriod.endDate must be of class `DateTime`")
         if not useDefault:
-            raise Exception("not setup to use other than default settings (2-week pay periods beginning at 00:01 of beginDate and ending at 23:59 of endDate)") 
+            raise Exception("not yet setup to use other than default settings (2-week pay periods beginning at 00:01 of beginDate and ending at 23:59 of endDate)") 
         self.uid = uid
         self.beginDate = beginDate
         self.endDate = endDate

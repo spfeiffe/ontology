@@ -1,6 +1,6 @@
 class PayPeriod:
     def __init__(self, uid, beginDate, endDate, useDefault=True):
-        self.classType = "administrative"
+        self.classType = "timekeeping"
         if not isinstance(beginDate, DateTime):
             raise Exception("PayPeriod.beginDate must be of class `DateTime`")
         if not isinstance(endDate, DateTime):
