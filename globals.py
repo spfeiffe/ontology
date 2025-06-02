@@ -26,9 +26,6 @@ def get_property_values(T, P):
 
 
 
-
-/*
-
 '''
 
 import jsonschema
@@ -96,37 +93,4 @@ print("Validation successful!")
 		}
 }
 
-
-
-
-
-
 '''
-
-
-
-
-Timesheet
-(must be only one timesheet per unique combo of (employeeID, payPeriodID)
-id
-employeeID foreign key 
-payPeriodID foreign key
-status (draft, submitted, withdrawn, approved)
-hoursWorked = [hourID1, hourID2, etc.] # foreign keys
-
-Hour
-id (0-335)
-utcOffset (e.g. -4)
-hourInteger (0-23) # including minutes :00 thru :59
-day (0-6)
-shiftWhichThisHourWouldUsuallyBePartOf (id) # seems useful 
-
-Shift
-id
-hourBeginInteger
-hourOnTheStrikingOfWhichThisShiftEnds # intege
-
-
-
-
-

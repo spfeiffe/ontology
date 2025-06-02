@@ -1,0 +1,5 @@
+class Timesheet:# Schedule = hours planned to work; Timesheet = hours actually worked. 
+    def __init__(self, id):
+        # must be only one timesheet per unique combo of (employeeID, payPeriodID) 
+        self.id = id
+        

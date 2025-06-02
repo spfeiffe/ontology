@@ -1,5 +1,6 @@
 class ScheduleRequest:
-    def __init__(self, pp, h, e):
+    def __init__(self, id, pp, h, e):
+        self.id = id
         if pp not in get_property_values(allPayPeriods, "uid"):
             raise Exception("ScheduleRequest.pp must be in get_property_values(allPayPeriods, 'uid')")
         self.pp = pp
@@ -15,10 +16,11 @@ class ScheduleRequest:
         if e not in get_property_values(allEmployees, "uid"):
             raiseException('ScheduleRequest.e must be in get_property_values(allEmployees, "uid")')
         self.e = e
-        self.status = "draft" # ["draft", "submitted", "approved", "denied"]
+        self.status = "draft" # ["draft", "submitted", "approved", "denied", "withdrawn"] 
         self.reasonDenied = None # must be not None if self.status = "denied"
     
     def fulfill(self):
-        # thisSchedule = get instance of `Schedule` with pay period id = self.pp
-        #
-        # thisSchedule.[self.h] = self.e
+        # if self.status == "approved":
+        #   # thisSchedule = get instance of `Schedule` with pay period id = self.pp
+        #   #
+        #   # thisSchedule.[self.h] = self.e
