@@ -1,0 +1,6 @@
+class EmployeeEncryptedFinancialData:
+    def __init__(self, employeeId, clueHowToDecrypt, routingNumber, accountNumber):
+        self.employeeId = employeeId # must match the id of an instance of `Employee` 
+        self.clueHowToDecrypt = clueHowToDecrypt
+        self.routingNumber = routingNumber
+        self.accountNumber = accountNumber
