@@ -1,0 +1,5 @@
+class UtcHour:
+    def __init__(self, dayOfWeekInteger, hourInteger):
+        self.classType = "administrative"
+        self.dayOfWeekInteger = dayOfWeekInteger
+        self.hourInteger = hourInteger
