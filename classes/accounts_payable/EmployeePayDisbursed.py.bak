@@ -1,0 +1,7 @@
+class EmployeePayDisbursed:
+    def __init__(self, id, timesheetId, amountEncrypted):
+        self.id = id
+        self.timesheetId = timesheetId # must match the id of exactly one instance of `Timesheet` 
+        self.dateDisbursed = DateTime.now()
+        # (sum of number of hours on the timesheet) * (EmployeeEncryptedFinancialData.payRate) 
+        self.amountEncrypted = "" 
