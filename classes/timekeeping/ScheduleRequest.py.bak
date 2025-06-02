@@ -21,4 +21,4 @@ class ScheduleRequest:
     def fulfill(self):
         # thisSchedule = get instance of `Schedule` with pay period id = self.pp
         #
-        # thisSchedule.[self.h] = self.e
+        # thisSchedule.[self.h] = set.
