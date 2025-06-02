@@ -17,3 +17,36 @@ class LocalHour:
             utcDayOfWeekInteger = localDayOfWeekInteger
         utcHourInteger = (utcHourIntegerRAW % 24)
         return UtcHour(utcDayOfWeekInteger, utcHourInteger)
+
+'''
+a = []
+now = DateTime.now(get_localzone())
+currentUtcOffset = int(now.utcoffset().total_seconds() / 3600)
+for dayInt in range(7):
+    for h in range(24):
+        a.append( LocalHour(dayInt, h, currentUtcOffset) )
+
+allLocalHours = tuple(a)
+del a
+
+l = allLocalHours[24]
+l.dayOfWeekInteger
+l.hourInteger
+l.utcOffset
+l.getUtcHour().dayOfWeekInteger
+l.getUtcHour().hourInteger
+
+l = allLocalHours[23]
+l.dayOfWeekInteger
+l.hourInteger
+l.utcOffset
+l.getUtcHour().dayOfWeekInteger
+l.getUtcHour().hourInteger
+
+l = LocalHour(0, 3, 6)
+l.dayOfWeekInteger
+l.hourInteger
+l.utcOffset
+l.getUtcHour().dayOfWeekInteger
+l.getUtcHour().hourInteger
+'''
